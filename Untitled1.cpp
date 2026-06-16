@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+
 #include <sstream>
 #include <time.h>
 #include <string>
@@ -496,47 +496,12 @@ int atm_panel()
 int main()
 {
   //Declare RECORD
-    root = insertion(root,"M.ROHAN Farooqui","12345-6789101-1",'M',"C",32001,1234,500);
+    root = insertion(root,"Harith","12567-9845606",'M',"C",32001,1234,500);
+    
     insertion_for_log(32001);
-    /*
-    root = insertion(root,"Ali Akbar","12345-6789101-2",'M',"C",32002,1122,500);
+    root = insertion(root,"Kajan","12321-9435675",'M',"C",32002,1212,1000);
     insertion_for_log(32002);
-    root = insertion(root,"Amir Ahmed","12345-6789101-3",'M',"S",32003,3214,1000);
-    insertion_for_log(32003);
-    root = insertion(root,"Jawad Khan","12345-6789101-4",'M',"C",32004,3215,1000);
-    insertion_for_log(32004);
-    root = insertion(root,"Ali saif","12345-6789101-5",'M',"C",32005,3216,2000);
-    insertion_for_log(32005);
-    root = insertion(root,"Fahad","12345-6789101-6",'F',"S",32006,3217,2000);
-    insertion_for_log(32006);
-    root = insertion(root,"Saim Asif","12345-6789101-7",'M',"C",32007,3218,2000);
-    insertion_for_log(32007);
-    root = insertion(root,"Rehan ul haq","12345-6789101-8",'M',"C",32008,3219,231);
-    insertion_for_log(32008);
-    root = insertion(root,"Ahsan ali","12345-6789101-9",'M',"S",32009,3220,2231);
-    insertion_for_log(32009);
-    root = insertion(root,"Uzair akbar","12345-6789102-0",'M',"C",32010,3221,546);
-    insertion_for_log(32010);
-    root = insertion(root,"Aslam ","12345-6789102-1",'M',"C",32011,3222,56467);
-    insertion_for_log(32011);
-    root = insertion(root,"Arif","12345-6789102-2",'M',"S",32012,3223,5674687);
-    insertion_for_log(32012);
-    root = insertion(root,"Saima ali","12345-6789102-3",'F',"S",32013,3224,557);
-    insertion_for_log(32013);
-    root = insertion(root,"Daniel shafiq","12345-6789102-4",'M',"S",32014,3225,56498);
-    insertion_for_log(32014);
-    root = insertion(root,"Danish shafiq","12345-6789102-5",'M',"S",32015,3226,637);
-    insertion_for_log(32015);
-    root = insertion(root,"Fahad saleem","12345-6789102-6",'M',"S",32016,3227,65468);
-    insertion_for_log(32016);
-    root = insertion(root,"Fahad Chaudhry","12345-6789102-7",'M',"C",32017,3228,6546);
-    insertion_for_log(32017);
-    root = insertion(root,"Shaheer","12345-6789102-8",'M',"C",32018,3229,567);
-    insertion_for_log(32018);
-    root = insertion(root,"Talha Asif","12345-6789102-9",'M',"C",32019,3230,654768);
-    insertion_for_log(32019);
-    root = insertion(root,"Yousuf ali","12345-6789103-0",'M',"C",32020,3231,500);
-    insertion_for_log(32020);*/
+   
   //END of Declare RECORD
 
   //Declare Variables
@@ -564,7 +529,7 @@ int main()
   cout<<"                                                                      __/ |                                        __/ |                       "<<endl;
   cout<<"                                                                     |___/                                        |___/                        "<<endl;
   cout<<"                                                                                                                                               "<<endl;
-  cout<<"                                                            Made by M.ROHAN FAROOQUI                                                           "<<endl;
+  cout<<"                                                            Made by Harith Baala Anand                                                           "<<endl;
   cout<<"\n"<<endl;
   cout<<"                                                       ********************************"<<endl;
   cout<<"                                                       **********LOGIN||PANEL**********"<<endl;
