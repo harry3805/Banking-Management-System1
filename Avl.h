@@ -8,7 +8,7 @@ using namespace std;
 struct node{
   //Data Entry
   string Name;
-  string CNIC;
+  string Aadhar;
   char Gender;
   string Type;
   int Acc_Number;
@@ -91,11 +91,11 @@ struct node *balance(struct node* temp)  {
 /////////////////////////////////////////////////////////////////////////////////////////END of main Functions in AVL
 
 
-struct node *insertion(struct node* temp,string name,string cnc,char gen,string type,int account_no,int PIN,int bal){    ///////////////////////// insertion
+struct node *insertion(struct node* temp,string name,string aadhar,char gen,string type,int account_no,int PIN,int bal){    ///////////////////////// insertion
  if(temp == NULL){
   temp = new node();
   temp->Name          = name;
-  temp->CNIC          = cnc;
+  temp->Aadhar          = aadhar;
   temp->Gender        = gen;
   temp->Type          = type;
   temp->Acc_Number    = account_no;
@@ -106,13 +106,13 @@ struct node *insertion(struct node* temp,string name,string cnc,char gen,string 
   temp->height        = 0;}
 
 if(account_no < temp->Acc_Number){
-     temp->left = insertion(temp->left, name, cnc,gen,type, account_no,PIN,bal);
+     temp->left = insertion(temp->left, name, aadhar,gen,type, account_no,PIN,bal);
   if(height(temp->left) - height(temp->right) == 2){
      if(account_no < temp->left->Acc_Number){temp = right_rotation(temp);}
      else{temp = left_right_rotation(temp);}}}
 
 if(account_no > temp->Acc_Number){
-    temp->right = insertion(temp->right, name, cnc,gen,type, account_no,PIN,bal);
+    temp->right = insertion(temp->right, name, aadhar,gen,type, account_no,PIN,bal);
   if(height(temp->right) - height(temp->left) == 2){
     if(account_no > temp->right->Acc_Number){temp = left_rotation(temp);}
     else{temp = right_left_rotation(temp);}}}
@@ -193,7 +193,7 @@ int print_data(struct node* temp, int x) ///////////////////////// Print Functio
     else{
         cout<<"        ####################################################################################################################################"<<endl;
         cout<<" "<<endl;
-        cout<<"          "<<"ACC_Number"<<"                 "<<"NAME"<<"                   "<<"CNIC"<<"                     "<<"GENDER"<<"            "<<"Type"<<"          "<<"Balance"<<endl;
+        cout<<"          "<<"ACC_Number"<<"                 "<<"NAME"<<"                   "<<"AADHAR"<<"                     "<<"GENDER"<<"            "<<"Type"<<"          "<<"Balance"<<endl;
         cout<<" "<<endl;
         cout<<"        ####################################################################################################################################"<<endl;
         cout<<" "<<endl;
@@ -202,7 +202,7 @@ int print_data(struct node* temp, int x) ///////////////////////// Print Functio
         cout<<"            ";
         cout<<setw(18)<<temp->Name;
         cout<<"           ";
-        cout<<temp->CNIC;
+        cout<<temp->AADHAR;
         cout<<"                ";
         cout<<temp->Gender;
         cout<<"                ";
@@ -227,7 +227,7 @@ if(temp->left != NULL){pre_order(temp->left);}
  cout<<"            ";
  cout<<setw(18)<<temp->Name;
  cout<<"           ";
- cout<<temp->CNIC;
+ cout<<temp->Aadhar;
  cout<<"                ";
  cout<<temp->Gender;
  cout<<"                ";
@@ -246,7 +246,7 @@ void print_for_admin(struct node* temp)   ////////////////////////// print For o
  cout<<"            ";
  cout<<setw(18)<<temp->Name;
  cout<<"           ";
- cout<<temp->CNIC;
+ cout<<temp->Aadhar;
  cout<<"                ";
  cout<<temp->Gender;
  cout<<"                ";
@@ -291,7 +291,7 @@ int with_draw(struct node* temp,int acc_num,int PIN,int bal)   /////////////////
 }
 
 
-int change_info(struct node* temp,string name,string cnic,char gender,string type,int acc_num,int PIN)   ///////////////////////// Change Info
+int change_info(struct node* temp,string name,string aadhar,char gender,string type,int acc_num,int PIN)   ///////////////////////// Change Info
 {
 
  while (temp != NULL){
@@ -300,7 +300,7 @@ int change_info(struct node* temp,string name,string cnic,char gender,string typ
   else{
     if(temp->Acc_Number == acc_num){
            temp->Name = name;
-           temp->CNIC = cnic;
+           temp->Aadhar = aadhar;
            temp->Gender = gender;
            temp->pin = PIN;
            temp->Type = type;}
