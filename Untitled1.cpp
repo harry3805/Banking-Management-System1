@@ -17,7 +17,7 @@ int create_Acc()
 {
   //Declared Variables
   string full_name;
-  string cnic;
+  string aadhar;
   string Acc_type;
   char g;
   int acc_no;
@@ -35,7 +35,7 @@ int create_Acc()
   cout<<" "<<endl;
   cout<<"                                            Enter Customer's Full Name : ";cin.ignore();getline(cin,full_name);
   cout<<" "<<endl;
-  cout<<"                                            Enter CNIC (xxxxx-xxxxxxx-x) : ";getline(cin,cnic);
+  cout<<"                                            Enter Aadhar Number (xxxx--xxxx--xxxx) : ";getline(cin,aadhar);
   cout<<" "<<endl;
   cout<<"                                            Enter Gender  (M/F) : ";cin>>g;
   cout<<" "<<endl;
@@ -53,7 +53,7 @@ int create_Acc()
   else{cout<<"                                            Minimum Balance is 500Rs. "<<endl;goto jump2;}
 
   jump3:
-      root = insertion(root,full_name,cnic,g,Acc_type,acc_no,pin,Balance); //insertion(root)
+      root = insertion(root,full_name,aadhar,g,Acc_type,acc_no,pin,Balance); //insertion(root)
       insertion_for_log(acc_no);
   return 1;
 }
@@ -73,10 +73,10 @@ int admin_panel()
 
   int acc_1;
   int pin_1;
-  string cnc_1;
+  string aadhar_1;
   char gen_1;
   string acc_type_1;
-  string new_cnc_1;
+  string new_aadhar_1;
   int new_pin_1;
   string new_acc_1;
   int admin_logs_cin;
@@ -174,7 +174,7 @@ int admin_panel()
   	            system("cls");
                 cout<<"        ####################################################################################################################################"<<endl;
     		    cout<<" "<<endl;
-    			cout<<"          "<<"ACC_Number"<<"                 "<<"NAME"<<"                   "<<"CNIC"<<"                     "<<"GENDER"<<"            "<<"Type"<<"          "<<"PIN"<<"          "<<"BALANCE"<<endl;
+    			cout<<"          "<<"ACC_Number"<<"                 "<<"NAME"<<"                   "<<"AADHAR"<<"                     "<<"GENDER"<<"            "<<"Type"<<"          "<<"PIN"<<"          "<<"BALANCE"<<endl;
     			cout<<" "<<endl;
     			cout<<"        ####################################################################################################################################"<<endl;
     			cout<<" "<<endl;
@@ -202,15 +202,15 @@ int admin_panel()
   	            	cout<<"                                            Enter New Name / previous Name : ";
   	            	cin>>new_acc_1;
   	            	getline(cin, new_acc_1);
-  	            	cout<<"                                            Enter New Cnic / Previous Cnic : ";
-  	            	getline(cin, new_cnc_1);
+  	            	cout<<"                                            Enter New Aadhar / Previous Aadhar : ";
+  	            	getline(cin, new_aadhar_1);
   	            	cout<<"                                            Enter Gender : ";
   	            	cin>>gen_1;
   	            	cout<<"                                            Enter Account Type C/S : ";
   	            	cin>> acc_type_1;
   	            	cout<<"                                            Enter New PIN / Previous PIN : ";
   	            	cin>> new_pin_1;
-  	            	change_info(root,new_acc_1,new_cnc_1,gen_1,acc_type_1,acc_1,new_pin_1);
+  	            	change_info(root,new_acc_1,new_aadhar_1,gen_1,acc_type_1,acc_1,new_pin_1);
   	            	cout<<"                                            Account information is Sucessfully Changed"<<endl;
 				  }
 				else if(result_admin_3 == -1){cout<<"                                            PIN is Incorrect...!!!"<<endl;}
