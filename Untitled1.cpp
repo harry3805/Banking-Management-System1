@@ -441,7 +441,7 @@ int atm_panel()
   cout<<"                                                       ***************************************"<<endl;
   cout<<"                                                       *******************ATM*****************"<<endl;
   cout<<"                                                       ***************************************"<<endl;
-  cout<<"                                                       *  Press 1 To Deposit Cash            *"<<endl;
+  cout<<"                                                       *  Press 1 To Withdraw Cash            *"<<endl;
   cout<<"                                                       *  Press 2 To Go Back to Main Menu    *"<<endl;
   cout<<"                                                       ***************************************"<<endl;
   cout<<"                                                       Enter an Option : ";
